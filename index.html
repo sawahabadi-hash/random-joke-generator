@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator 😂</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>😂 Random Joke Generator</h1>
+            <p>Get random jokes from the internet to brighten your day!</p>
+        </header>
+
+        <main>
+            <div class="joke-display" id="jokeDisplay">
+                <p class="loading-text">Click the button to get a joke!</p>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-primary" onclick="getJoke()">
+                    <span>Get Random Joke</span>
+                </button>
+                <button class="btn btn-secondary" onclick="toggleAPIs()">
+                    <span>Choose API</span>
+                </button>
+                <button class="btn btn-secondary" onclick="shareJoke()">
+                    <span>Share Joke</span>
+                </button>
+            </div>
+
+            <div class="api-selector" id="apiSelector" style="display: none;">
+                <h3>Select Joke Source:</h3>
+                <div class="api-options">
+                    <label class="api-option">
+                        <input type="radio" name="api" value="dad-jokes" checked>
+                        <span>Dad Jokes API</span>
+                    </label>
+                    <label class="api-option">
+                        <input type="radio" name="api" value="jservice">
+                        <span>Jservice (Fun Facts)</span>
+                    </label>
+                    <label class="api-option">
+                        <input type="radio" name="api" value="useless-facts">
+                        <span>Useless Facts</span>
+                    </label>
+                    <label class="api-option">
+                        <input type="radio" name="api" value="advice">
+                        <span>Advice Slip API</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="joke-history" id="jokeHistory">
+                <h3>📚 Recent Jokes</h3>
+                <ul id="historyList"></ul>
+                <button class="btn btn-small" onclick="clearHistory()" style="margin-top: 10px;">Clear History</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with ❤️ | Multiple APIs for endless laughs</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
